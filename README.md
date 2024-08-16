@@ -32,7 +32,7 @@ Movieflix is a comprehensive web application designed for movie enthusiasts. It 
 1. Clone the repository:
 
 ```
-git clone https://github.com/chinxcode/mmovieflix.git
+git clone https://github.com/chinxcode/movieflixx.git
 ```
 
 2. Navigate to the project directory:
