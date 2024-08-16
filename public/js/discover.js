@@ -2,32 +2,35 @@ document.addEventListener("DOMContentLoaded", () => {
     initDiscoverPage();
 });
 
-async function initDiscoverPage() {
+async function loadDiscoverResults(type, page, filters = {}) {
     const discoverGrid = document.getElementById("discover-grid");
-    const tabs = document.querySelectorAll(".tab");
     const prevPageBtn = document.getElementById("prev-page");
     const nextPageBtn = document.getElementById("next-page");
     const currentPageSpan = document.getElementById("current-page");
-    let currentPage = 1;
 
-    async function loadDiscoverResults(type, page, filters = {}) {
-        showLoadingSpinner(discoverGrid);
-        let endpoint = `/discover/${type}?page=${page}`;
+    showLoadingSpinner(discoverGrid);
+    let endpoint = `/discover/${type}?page=${page}`;
 
-        if (filters.sortBy) endpoint += `&sort_by=${filters.sortBy}`;
-        if (filters.year) endpoint += `&year=${filters.year}`;
+    if (filters.sortBy) endpoint += `&sort_by=${filters.sortBy}`;
+    if (filters.year) endpoint += `&year=${filters.year}`;
 
-        const discoverData = await fetchTMDBData(endpoint);
-        removeLoadingSpinner(discoverGrid);
+    const discoverData = await fetchTMDBData(endpoint);
+    removeLoadingSpinner(discoverGrid);
 
-        if (discoverData) {
-            populateContentGrid(discoverData.results, discoverGrid);
-            currentPageSpan.textContent = `Page ${page}`;
-            prevPageBtn.disabled = page === 1;
-            nextPageBtn.disabled = page === discoverData.total_pages;
-            smoothScrollToTop();
-        }
+    if (discoverData) {
+        populateContentGrid(discoverData.results, discoverGrid);
+        currentPageSpan.textContent = `Page ${page}`;
+        prevPageBtn.disabled = page === 1;
+        nextPageBtn.disabled = page === discoverData.total_pages;
+        smoothScrollToTop();
     }
+}
+
+async function initDiscoverPage() {
+    const tabs = document.querySelectorAll(".tab");
+    const prevPageBtn = document.getElementById("prev-page");
+    const nextPageBtn = document.getElementById("next-page");
+    let currentPage = 1;
 
     await loadDiscoverResults("movie", currentPage);
 
