@@ -1,0 +1,18 @@
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.genre-item {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.genre-item:hover {
+    background-color: var(--hover-color);
+}

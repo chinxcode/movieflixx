@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+
+        <title>Cast Details - StreamFlix</title>
+        <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/person-details.css" />
+    </head>
+    <body><div id="page-loader" class="page-loader">
+    <span class="loader"></span>
+  </div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/"><img src="/assets/logo.png" alt="Movieflix Logo" /></a>
+                    <a href="/"><span>Movieflix</span></a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search movies and TV shows..." />
+                    <i class="fas fa-search"></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="genres">Genres</a></li>
+                    <li><a href="discover">Discover</a></li>
+                    <li><a href="my-list">My List</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="cast-details">
+            <div class="cast-info">
+                <div class="profile-image">
+                    <img id="profile-image" src="" alt="Actor Profile" />
+                </div>
+                <div class="info">
+                    <h1 id="cast-name"></h1>
+                    <p id="biography"></p>
+                    <div class="personal-info">
+                        <h3>Personal Info</h3>
+                        <p><strong>Known For:</strong> <span id="known-for"></span></p>
+                        <p><strong>Known Credits:</strong> <span id="known-credits"></span></p>
+                        <p><strong>Gender:</strong> <span id="gender"></span></p>
+                        <p><strong>Birthday:</strong> <span id="birthday"></span></p>
+                        <p><strong>Place of Birth:</strong> <span id="place-of-birth"></span></p>
+                    </div>
+                    <div class="social-links" id="social-links"></div>
+                </div>
+            </div>
+            <div class="filmography">
+                <h2>Known For</h2>
+                <div id="known-for-list" class="movie-grid"></div>
+                <h2>Acting</h2>
+                <div id="acting-credits" class="credits-list"></div>
+                <button id="expand-credits" class="expand-button">Show More</button>
+            </div>
+            <div class="photos">
+                <h2>Photos</h2>
+                <div id="photo-grid" class="photo-grid"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Movieflix</h3>
+                    <p>
+                        Movieflix is your ultimate destination for exploring movies and TV shows. Enjoy a vast library at your
+                        fingertips.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="genres">Genres</a></li>
+                        <li><a href="discover">Discover</a></li>
+                        <li><a href="my-list">My List</a></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Movieflix. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="/js/api.js"></script>
+        <script src="/js/ui.js"></script>
+        <script src="/js/search.js"></script>
+        <script src="/js/castDetails.js"></script>
+        <script>
+            window.va =
+                window.va ||
+                function () {
+                    (window.vaq = window.vaq || []).push(arguments);
+                };
+        </script>
+        <script defer src="/_vercel/insights/script.js"></script>
+        <script>
+            window.si =
+                window.si ||
+                function () {
+                    (window.siq = window.siq || []).push(arguments);
+                };
+        </script>
+        <script defer src="/_vercel/speed-insights/script.js"></script>
+    </body>
+</html>

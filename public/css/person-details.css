@@ -1,0 +1,178 @@
+#cast-details {
+    padding: 6rem 2rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+.cast-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    flex: 1;
+}
+
+.personal-info {
+    margin-top: 1rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--accent-color);
+}
+
+.movie-grid,
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.movie-card,
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card:hover,
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img,
+.photo-item img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-card .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.credits-list {
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.credits-list.expanded {
+    max-height: none;
+}
+
+.credit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+.credit-item .year {
+    min-width: 50px;
+    margin-right: 1rem;
+}
+
+.credit-item .title {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.credit-item .character {
+    color: var(--text-color-secondary);
+}
+
+.expand-button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+@media screen and (min-width: 768px) {
+    .cast-info {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .profile-image {
+        flex: 0 0 300px;
+    }
+
+    .movie-grid,
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .credit-item .character {
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .movie-grid,
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .movie-card .title {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-links a {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .credit-item {
+        font-size: 0.9rem;
+    }
+
+    .credit-item .year {
+        min-width: 40px;
+        margin-right: 0.5rem;
+    }
+}

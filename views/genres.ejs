@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+        <title>Genres - Movieflix</title>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/genres.css" />
+        <link rel="stylesheet" href="/css/home.css" />
+    </head>
+    <body>
+        <div id="page-loader" class="page-loader">
+            <span class="loader"></span>
+        </div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/"><img src="/assets/logo.png" alt="Movieflix Logo" /></a>
+                    <a href="/"><span>Movieflix</span></a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search movies and TV shows..." />
+                    <i class="fas fa-search"></i>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="genres" class="active">Genres</a></li>
+                    <li><a href="discover">Discover</a></li>
+                    <li><a href="my-list">My List</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Genres</h1>
+            <div class="category-tabs">
+                <button class="tab active" data-type="movie">Movies</button>
+                <button class="tab" data-type="tv">TV Shows</button>
+            </div>
+            <div class="genre-grid" id="genre-grid"></div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Movieflix</h3>
+                    <p>
+                        Movieflix is your ultimate destination for exploring movies and TV shows. Enjoy a vast library at your fingertips.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="genres">Genres</a></li>
+                        <li><a href="discover">Discover</a></li>
+                        <li><a href="my-list">My List</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Movieflix. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="/js/api.js"></script>
+        <script src="/js/ui.js"></script>
+        <script src="/js/genres.js"></script>
+        <script src="/js/search.js"></script>
+        <script>
+            window.va =
+                window.va ||
+                function () {
+                    (window.vaq = window.vaq || []).push(arguments);
+                };
+        </script>
+        <script defer src="/_vercel/insights/script.js"></script>
+        <script>
+            window.si =
+                window.si ||
+                function () {
+                    (window.siq = window.siq || []).push(arguments);
+                };
+        </script>
+        <script defer src="/_vercel/speed-insights/script.js"></script>
+    </body>
+</html>
